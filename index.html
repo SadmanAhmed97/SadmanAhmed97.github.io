@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relax Landing page</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.csshttps://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/solid.min.css"></script>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+:root {
+	--primary-color: gray;
+	--secondary--color: #f5c42f;
+	--text-color: #c5bbec;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: var(--primary-color);
+	color: #fff;
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin-bottom: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+ul {
+	list-style: none;
+}
+
+.btn {
+	display: inline-block;
+	border: 0;
+	background: var(--secondary--color);
+	color: #fff;
+	border-radius: 20px;
+	padding: 8px 30px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+.btn:hover {
+	transform: scale(0.98);
+}
+
+.primary-text {
+	color: var(--primary-color);
+}
+
+.secondary-text {
+	color: var(--secondary--color);
+}
+
+.section {
+	position: relative;
+	padding: 0 20px;
+}
+
+/* Section Top */
+.section-top {
+	min-height: 800px;
+  background-color:rgba(128, 122, 122, 0.658);
+}
+
+.section-top h1 {
+	font-size: 70px;
+	line-height: 1.3;
+}
+
+.section-top .content {
+	position: absolute;
+	top: 100px;
+	right: 5%;
+	width: 60%;
+  
+}
+
+/* Section Stream */
+.section-stream {
+	min-height: 450px;
+	background-color: whitesmoke;
+  background-attachment: scroll;
+}
+
+.section-stream h2 {
+	font-size: 35px;
+}
+
+.section-top .play {
+	width: auto;
+	position: absolute;
+  height: 100%;
+  left: 0px;
+  bottom: 0%;
+}
+
+
+.section-top .content > div, .section-grid > div {
+	background: rgba(255, 255, 255, 0.1);
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+
+/* Section Grid */
+.section-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 30px;
+	text-align: center;
+}
+
+.section-grid p {
+	color: var(--text-color);
+}
+
+.section-grid .dot {
+	font-size: 40px;
+	padding-left: 2px;
+}
+
+/* Footer */
+.footer {
+	border-top: var(--text-color) 1px solid;
+	padding: 10px;
+}
+
+.footer ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+	.section-top .content,
+	.section-stream .play,
+	.section-stream .content {
+		position: static;
+		width: 100%;
+	}
+
+	.section-top {
+		min-height: 200px;
+		padding-top: 20px;
+	}
+
+	.section-top .content {
+		text-align: center;
+	}
+
+	.section-top .content h1 {
+		font-size: 45px;
+	}
+
+	.section-stream {
+		min-height: 400px;
+	}
+
+	.section-top .play {
+		width: 50%;
+		display: block;
+		margin: 30px auto;
+	}
+
+	.section-grid {
+		display: block;
+		margin-top: 0;
+	}
+
+	.footer ul {
+		display: block;
+	}
+}
+
+</style>
+</head>
+
+
+
+
+<body>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg" style="background-color:var(--secondary--color);">
+      <a class="navbar-brand" href="#"><strong>Sadman Ahmed</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon" style="background-image: url(menu.png);" ></span>
+      </button>
+      <div class="collapse navbar-collapse navbar-dark" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#education">Education <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#award">Awards</a>
+          <a class="nav-item nav-link" href="#skill">Skills</a>
+          <a class="nav-item nav-link" href="#experience">Experience</a>
+          <a class="nav-item nav-link" href="#project">Projects</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+    <section class="section section-top" style="padding-left: 200px;" >
+      <img
+            class="play rellax"
+            src="portfolio_pic.jpg"
+            alt=""
+            height="650px"
+            data-rellax-speed="-2" data-rellax-xs-speed="-5"/>
+
+        <div class="content rellax" data-rellax-speed="1">
+          <div>
+            <h2 class="secondary-text" >Sadman Ahmed</h2>
+            <h5 style="font-weight: bolder;">CSE Graduate, Aspiring Web and Mobile App Developer</h5>
+            <p>
+            </p>
+          </div>
+          <div>
+            <h2 class="secondary-text">About me</h2 class="secondary-text">
+            <p>
+              Hey there! I am Sadman Ahmed,a graduate of North South University from ECE department having
+              completed the CSE program. Good basics on web and android developement, database systems with a hint of Machine Learning
+              and AI. Persistent problem solver with a responsible attitude. 
+            </p>
+          </div>
+          <div>
+            <h2 class="secondary-text">Basic Information</h2 class="secondary-text">
+            <p>Email: sadman.ahmed01@northsouth.edu     </p>
+            <p>Address: 121 Boro Moghbazar, Kazi Office Lane, Dhaka-1217</p>
+          </div>
+            <h5>Let's get connected</h5>
+            <a href="https://www.facebook.com/sadmanahmed.ethan"><img src="fb_icon_2.jpg" style="width: 50px; height: 50px;"></a>       
+            <a href="https://github.com/SadmanAhmed97"><img src="git_icon.png" style="width: 50px; height: 50px;"></a>
+            <a href="https://www.linkedin.com/in/sadman-ahmed-a7035a188/"><img src="link_icon.png" style="width: 50px; height: 50px;"></a>
+            <a href="https://www.sadman.ahmed01@northsouth.edu"><img src="gmail_icon.png" style="width: 50px; height: 50px;"></a>
+
+          </div>
+        </div>
+    </section>
+
+    <section class="section section-stream" >
+      <br>
+      <br>
+      <br>
+      <h2 class="text-center" style="color: black; font-weight:bold; font-size: 45px;" id="education">Education</h2>
+      <br>
+      <div class="card-group">
+        <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="max-width: 80%; margin-left: 10%;">
+          <div class="row no-gutters">
+            <div class="col-md-4" style="border-right: 1px solid black; background-color:var(--secondary--color);">
+              <h2 style="color: var(--primary-color); padding-left: 10px; padding-top: 15px;">
+                Bachelor's Degree
+              </h2>      
+              <p style="padding-left: 10px;">Fall-2016-Fall-2020</p>       
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h4 class="card-title" style="color: var(--primary-color); font-weight: bold;">BS in Computer Science and Engineering</h4>
+                <p class="card-text" style="color: var(--primary-color); padding-top: 0px;">North South University</p>
+                <p class="card-text" style="color: var(--primary-color);">
+                  Department: ECE<br>
+                  Credits completed: 117.5<br>
+                  CGPA: 3.07/4.00
+                </p>
+                <p class="card-text" style="color: var(--primary-color);"></p>
+                <p class="card-text" style="color: var(--primary-color);"></p>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-group">
+        <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="max-width: 80%; margin-left: 10%;">
+          <div class="row no-gutters">
+            <div class="col-md-4 " style="border-right: 1px solid black; background-color:var(--secondary--color);">
+              <h2 style="color: var(--primary-color); padding-left: 10px; padding-top: 15px;">
+                A-levels
+                <h5 style="padding-left: 10px;">Passing year: 2016</h5>
+              </h2> 
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h4 class="card-title" style="color: var(--primary-color); font-weight: bold;">Academia School</h4>
+                <p class="card-text" style="color: var(--primary-color);">
+                Subjects: Science<br>
+                GPA: 3.3
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="card-group">
+        <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="max-width: 80%; margin-left: 10%;">
+          <div class="row no-gutters">
+            <div class="col-md-4 " style="border-right: 1px solid black; background-color:var(--secondary--color);">
+              <h2 style="color: var(--primary-color); font-weight: bold; padding-left: 10px;">
+                O-levels
+                <br>
+                <h5 style="padding-left: 10px; padding-top: 15px;">Passing year: 2014</h5>
+              </h2> 
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h4 class="card-title" style="color: var(--primary-color);">Academia School</h4>
+                <p class="card-text" style="color: var(--primary-color);">
+                Subjects: Science and accounting<br>
+                GPA: 5.0
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br id="award">
+      <br>
+      <h2 class="text-center" style="color: black; font-weight:bold; font-size: 45px;">Honors and Awards</h2>
+      <div class="card-deck text-center" style="margin:9%; margin-top: 40px; margin-bottom: 20px;" >
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+          <div class="card-body" style="background-color:lightgray;">
+            <h3 class="card-title" style="color: orange; font-weight: bold;">Edexcel High Achiever's Awards</h3>
+            <p class="card-text" style="color: black;">
+              Purpose: Excellent results in O-level <br>
+              Year: 2014
+            </p>
+          </div>
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+          <div class="card-body" style="background-color:lightgray;">
+            <h3 class="card-title" style="color: orange; font-weight: bold;">Daily Star Awards</h3>
+            <p class="card-text" style="color: black;">
+              Purpose: Excellent results in O-level <br>
+              Year: 2015
+            </p>
+          </div>
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+          <div class="card-body" style="background-color:lightgray;">
+            <h3 class="card-title" style="color: orange; font-weight: bold;">25% Tuition Waiver</h3>
+            <p class="card-text" style="color:black;">
+              From: North South University <br>
+              Purpose: Excellent performance
+            </p>
+          </div>
+        </div>
+        </div>
+
+      <h2 id="skill" class="text-center" style="color: black; font-weight:bold; font-size: 45px;">Skills</h2>
+      <div class="card-deck text-center" style="margin:9%; margin-top: 40px; margin-bottom: 10px;" >
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+          <div class="card-body" style="background-color:gray;">
+            <h4 class="card-title" style="font-weight: bold; color: white;">Programming Languages</h4>
+            <p class="card-text" style="color: var(--secondary--color); font-weight: bold;">
+              C, Java, Python, R
+            </p>
+          </div>
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+          <div class="card-body" style="background-color:gray;">
+            <h4 class="card-title" style="font-weight: bold; color: white;">Database Systems</h4>
+            <p class="card-text" style="color: var(--secondary--color); font-weight: bold;">
+              MySQL, NoSQL(Mongo DB) 
+            </p>
+          </div>
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+          <div class="card-body" style="background-color:gray;">
+            <h4 class="card-title" style="font-weight: bold; color: white;">Developement tools and frameworks</h4>
+            <p class="card-text" style="color: var(--secondary--color); font-weight: bold;">
+              Html, CSS, Django
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-deck text-center" style="margin:9%; margin-top: 10px; margin-bottom: 20px;" id="skill">
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+          <div class="card-body" style="background-color:gray;">
+            <h4 class="card-title" style="font-weight: bold; color: white;">Software and version tools</h4>
+            <p class="card-text" style="color: var(--secondary--color); font-weight: bold;">
+              MS office, LATEX, Git, Github
+            </p>
+          </div>
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+          <div class="card-body" style="background-color:gray;">
+            <h4 class="card-title" style="font-weight: bold; color: white;">Communication Tools</h4>
+            <p class="card-text" style="color: var(--secondary--color); font-weight: bold;">
+              Slack, Trello
+            </p>
+          </div>
+        </div>
+        
+        
+      </div>
+      
+  
+      <h2 class="text-center" style="color: black; font-weight:bold; font-size: 45px;" id="experience">Professional Experience</h2>
+      <br>
+      <div class="card-group">
+        <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="max-width: 80%; margin-left: 10%;">
+          <div class="row no-gutters">
+            <div class="col-md-4 " style="border-right: 1px solid black; background-color:var(--secondary--color);">
+              <h2 style="color: var(--primary-color); padding-left: 10px; padding-top: 15px;">
+                Royal School Dhaka
+                <h5 style="padding-left: 10px;">Oct-2018 to Nov-2019</h5>
+              </h2> 
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h4 class="card-title" style="color: var(--primary-color); font-weight: bold;">Senior Physics and Chemistry teacher</h4>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-center" style="color: black; font-weight:bold; font-size: 45px;" id="project">Projects</h2>
+      <br>
+      <div class="card-group">
+        <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="max-width: 80%; margin-left: 10%;">
+          <div class="row no-gutters">
+            <div class="col-md-4" style="border-right: 1px solid black; background-color:var(--secondary--color);">
+              <h2 style="color: var(--primary-color); padding-left: 10px; padding-top: 15px;">
+                <a href="https://github.com/SadmanAhmed97/cse327">E-commerce Website</a>
+              </h2>      
+              <p style="padding-left: 10px;">Built with Django</p>       
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" style="color: var(--primary-color); font-weight: bold;">Details</h5>
+                <p class="card-text" style="color: var(--primary-color);">
+                  Simple funtions of login, signup, and cart funtions are implemented<br>
+                </p>
+                <br>
+                <h5 class="card-title" style="color: var(--primary-color); font-weight: bold;">Technology used</h5>
+                <p class="card-text" style="color: var(--primary-color);">
+                Frontend: Html, CSS, JS<br>
+                Backend: Django, Python, sqlite3
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-group">
+        <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="max-width: 80%; margin-left: 10%;">
+          <div class="row no-gutters">
+            <div class="col-md-4" style="border-right: 1px solid black; background-color:var(--secondary--color);">
+              <h2 style="color: var(--primary-color); padding-left: 10px; padding-top: 15px;">
+                <a href="#">Physiotherapy Website</a>
+              </h2>      
+              <p style="padding-left: 10px;">Built with Django</p>
+              <h8 style="font-style: italic; padding-left: 10px;">(In-Progress)</h8>       
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" style="color: var(--primary-color); font-weight: bold;">Details</h5>
+                <p class="card-text" style="color: var(--primary-color);">
+                  A heavy website for physiotherapy search and consultation system.There are 2types of users, doctors and patients.
+                  Patients may look at physiotherapy video tutorials, find a physiotherapy clinic within 5km of their position,
+                  live chat with doctors or even appoint a physiotherapist to their home. Doctors may also perform similar funtions
+                  but will also have a schedule for appointments with patients.
+                  
+                </p>
+                <br>
+                <h5 class="card-title" style="color: var(--primary-color); font-weight: bold;">Technology used</h5>
+                <p class="card-text" style="color: var(--primary-color);">
+                Frontend: Html, CSS, JS, template from Html5up<br>
+                Backend: Django, Python, sqlite3, agora.io, google maps and places API
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+              
+
+
+          
+</section>
+
+
+
+
+<footer class="footer">
+<p class="text-center">© 2020 Sadman Ahmed</p>
+</footer>
+
+  <script src="node_modules/rellax/rellax.js"></script>
+  <script src="node_modules/rellax/rellax.min.js"></script>
+  <script>
+    let rellax = new Rellax('.rellax')
+   </script>
+
+</body>
+</html>
